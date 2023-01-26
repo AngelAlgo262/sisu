@@ -12,7 +12,7 @@ Tenemos una función hash, que como entrada recibe un string x. La función devu
 
 function cambiarOrden() {
   let cadena = "a,b,e,h,i,m,o,p,r,s,t,u,v"; //cadena separada por comas (diccionario)
-  let arr1 = cadena.split(",", 10); // la cadena se convierte en array olo de 10 caracteres
+  let arr1 = cadena.split(",", 10); // la cadena se convierte en array solo de 10 caracteres
   //Se ordena el arreglo de forma aleatoria
   let strale = arr1.sort(function () {
     return Math.random() - 0.5;
@@ -21,14 +21,24 @@ function cambiarOrden() {
   
 };
 
+//Se pone la función cambiarOrden en un variable
 let arr2 = cambiarOrden()
 
+//Se asigna el valor de X
 let x = arr2;
 
-console.log(x);
+//intento de localizar la palabra automáticamente
+/* while(
+  x != 83503320370387
+) {
+  cambiarOrden();
+} */
 
+//Console.log de apoyo 
+console.log(x);
 console.log("El largo de la cadena X es " + x.length);
 
+//función hash proporcionada por SISU
 function hash(x) {
   var seed = 41;
   diccionario = "abehimoprstuv";
@@ -38,9 +48,11 @@ function hash(x) {
   return seed;
 }
 
+//console.log de apoyo
 console.log("Los caracteres de la cadena son " + x);
 console.log("El valor de la función es " + hash(x));
 
+//En caso de encontrar la palabra, se mostrará en pantalla
 if (hash(x) == 83503320370387) {
   document.write("La palabra secreta es " + x + ":)");
 } else {
