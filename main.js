@@ -21,13 +21,9 @@ function cambiarOrden() {
   
 };
 
-let x = cambiarOrden()
+let arr2 = cambiarOrden()
 
-while(
-  x != 83503320370387
-){
-  cambiarOrden;
-}
+let x = arr2;
 
 console.log(x);
 
@@ -46,7 +42,7 @@ console.log("Los caracteres de la cadena son " + x);
 console.log("El valor de la función es " + hash(x));
 
 if (hash(x) == 83503320370387) {
-  document.write("La palabra secreta es " + x);
+  document.write("La palabra secreta es " + x + ":)");
 } else {
   document.write("No sé cual sea la palabra secreta :(");
 }
